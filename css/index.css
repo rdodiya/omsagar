@@ -1,0 +1,24 @@
+.map-container-2{
+overflow:hidden !important;
+padding-bottom:56.25% !important;
+position:relative !important;
+height:0 !important;
+}
+.map-container-2 iframe{
+left:0 !important;
+top:0 !important;
+height:100% !important;
+width:100% !important;
+position:absolute !important;
+}
+.card {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    word-wrap: break-word !important;
+    background-color: #ab8989 !important;
+    background-clip: border-box !important;
+    border: 1px solid rgba(0,0,0,.125) !important;
+    border-radius: .25rem !important;
+}
