@@ -1,0 +1,279 @@
+<!--This is doctype-->
+<!DOCTYPE html>
+<!--Our HTMLcode atarts here-->
+<html lang="en">
+    <!--Our Head tag atarts here-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</head>
+ <!--Our Body tag atarts here-->
+
+ <!--NAVIGATIONBAR----------------------------------------------------------->
+ <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background: #0075A2;color: aliceblue; " >
+   <div class="container-fluid" >
+       <div class="navbar-nav me-auto mb-4 mb-lg-0">
+           <a class="container navbar-brand" href="index.html">
+               <img src="img/OM_LOGO.jpg" alt="logo.png not found" height="40" width="50" class="d-inline-block align-top">
+           </a>
+       </div>
+       <div class="container position-relative">
+           <div class="position-absolute top-50 end-0 translate-middle-y">
+               <div class="" style="padding-right: 27.5mm;">
+                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"  aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                   </button>
+
+                   <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+                       <ul class="nav navbar-nav navbar-right" >
+                           <li class="nav-item">
+                               <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link " href="shopping.html">SHOP</a>
+                           </li>
+                           <li class="nav-item dropdown">
+                               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"           data-bs-toggle="dropdown" aria-expanded="false">
+                                   PRODUCTS
+                               </a>
+                               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                   <li><a class="dropdown-item" href="grey_products.html">Grey Products</a></li>
+                                   <li><hr class="dropdown-divider"></li>
+                                   <li><a class="dropdown-item" href="more_product.html">More</a></li>
+                               </ul>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link " href="contact.html">CONTACT</a>
+                           </li>
+                           <li>
+                           <li class="nav-item">
+                               <a class="nav-link " href="about.html">ABOUT</a>
+                           </li>
+                               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  data-bs-toggle="dropdown" aria-expanded="false">
+                                 MORE
+                               </a>
+                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                 <li><a class="dropdown-item" href="Complain.html" target="_blank">Complain</a></li>
+                                 <li><a class="dropdown-item" href="feedback_help.html" target="_blank">Help & Feedback</a></li>
+                                 <li><a class="dropdown-item" href="#" target="_blank">....</a></li>
+                             </ul></li>
+                             &nbsp;&nbsp;
+                           <li class="nav-item">
+                               <a href="nav-link active">
+                                   <svg xmlns="http://www.w3.org/2000/svg" style="color: white;" width="25" height="25" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                                       <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                                   </svg>
+                               </a>
+                           </li>
+
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</nav>
+      <!--------------------------------------------------------------------------------------------------------------------->
+
+  <u><h2> <b> Product Information :</b></h2></u>
+
+  <div class="btn-group">
+    <a href="#" class="btn btn-primary active" aria-current="page">Main Product</a>
+    <a href="#" class="btn btn-primary">Other Product</a>
+  </div>
+
+  <nav id="navbar-example3" class="navbar navbar-light bg-light">
+    <div class="row">
+        <div class="col-2">
+            <nav class="nav nav-pills flex-column  ">
+                <a class="nav-link" href="#item-1"> Main Product </a>
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link ms-3 my-1" href="#item-1-1">Yarn</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-2">Grey Fsbrics</a>
+                </nav>
+                <a class="nav-link" href="#item-2">Item 2</a>
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link ms-3 my-1" href="#item-2-1">Blends Poly</a>
+                  <a class="nav-link ms-3 my-1" href="#item-2-2">Tencel & Cotton</a>
+                  <a class="nav-link ms-3 my-1" href="#item-2-3">Linear blends with cotton</a>
+                  <a class="nav-link ms-3 my-1" href="#item-2-5">Double Yarn </a>
+                  <a class="nav-link ms-3 my-1" href="#item-2-6">Gassed Yarn</a>
+                  </nav>
+              </nav>
+        </div>
+
+
+      <div class="col-10">
+  <div data-bs-spy=" container scroll" class="mb-sm-6" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0" style="text-align: justify;">
+    <h4 id="item-1">Main Products</h4>
+    <br>
+    <h5 id="item-1-1">1) Yarn</h5>
+    <img src="img/Yarn.png" alt="" style="width:5cm">
+    <p >Yarn is a long continuous length of interlocked fibres, suitable for use in the production of textiles, sewing, crocheting, knitting, weaving, embroidery, or ropemaking. m
+    Thread is a type of yarn intended for sewing by hand or machine. ... Embroidery threads are yarns specifically designed for needlework.
+    The most common plant fiber is cotton, which is typically spun into fine yarn for mechanical weaving or knitting into cloth.</p>
+      <img src="img/Yarn1.png" alt="" style="width:5cm">
+     <p> Cotton and polyester are the most commonly spun fibers in the world. Cotton is grown throughout the world. </p>
+    <p>After harvesting it is ginned and prepared for yarn spinning. Polyester is extruded from polymers derived from natural gas and oil.</p>
+        <p> Synthetic fibers are generally extruded in continuous strands of gel-state materials. </p>
+      <p>These strands are drawn (stretched), annealed (hardened), and cured to obtain properties desirable for later processing.</p>
+
+    <h5 id="item-1-2">2) Grey Fabrics </h5>
+    <img src="img/Grey.png" alt="" style="width:5cm">
+    <p>Greige is an unfinished woven or knitted fabric that hasn't been bleached or dyed.</p>
+    <p> It can be used for upholstery, window treatments, clothes and more.</p>
+    <p>Greige fabric is also known as grey fabric and the term grey does not indicate the color of the fabric but the finish.</p>
+    <img src="img/Grey1.png" alt="" style="width:5cm">
+    <p>This fabric is unprocessed or unfinished which hasn't been dyed, bleached and processed</p>
+    <p> It can be used in the making of upholstery, home linen, clothes, garments and more.</p>
+    <p>Grey fabric inspection is the process of identifying weaving faults in the fabric just after the grey fabric production in the loom.</p>
+
+    <h4 id="item-2">Other Products</h4>
+    <br>
+
+    <h5 id="item-2-1">1)Blends Poly</h5>
+
+    <img src="img/Blends.png" alt="" style="width:5cm">
+    <p> it's when two or more types of fibers are combined together into the one fabric. </p>
+    <p>Blends are created to improve the feel, performance or durability of the fabric.</p>
+    <p>For example when cotton and spandex are combined it often creates a fabric that is that is lightweight stretch.</p>
+    <img src="img/Blend2.png" alt="" style="width:5cm">
+    <p>59/50 blend produces more softer and more absorbent fabric.</p>
+    <p>Polyester, when blended with cotton, contributes more strength wrinkle resistance and shape; retention,  and heat conduction.</p>
+    <p> Cotton blend means your shirt will have the same feel as a cotton tee, but it's a little more lightweight and resistant to wrinkles.</p>
+
+    <h5 id="item-2-2">2)Tencel & Cotton </h5>
+    <img src="img/Tencel.png" alt="" style="width:5cm">
+    <p>The generic name for Tencel is Lyocell .</p>
+    <p>The versatility of this fiber produces outstanding fabrics for both men's and women's casual and tailored wear, as well as women lingerie.</p>
+    <p>Lyocell is produced from wood pulp using a solvent spinning process.</p>
+    <img src="img/Tencel2.png" alt="" style="width:5cm">
+    <p>Lyocell, better known as Tencel, is a fiber made from the wood pulp of trees that are grown and replaced on specialized tree farms. </p>
+    <p>Unlike most cellulosic fabrics, Tencel is produced using recyclable, Earth-friendly solvents.</p>
+    <p>When blended with cotton, Tencel adds wrinkle-resistance and the lustrous feel of a silk.</p>
+
+    <h5 id="item-2-3">3)Polyster</h5>
+    <img src="img/Polyster.png" alt="" style="width:5cm">
+    <p>Polyester is a synthetic fiber derived from coal, air, water, and petroleum. </p>
+    <p> It does not absorb moisture, but does absorb oil; this quality makes polyester the perfect fabric for the application of water-, soil-, and fire-resistant finishes.</p>
+    <p>Its low absorbency also makes it naturally resistant to stains.</p>
+    <img src="img/Polyster2.png" alt="" style="width:5cm">
+    <p>Since polyester garments are both durable and moisture-resistant, it's a common choice for outdoor clothing that needs to be able to keep you dry in inclement weather.</p>
+    <p>Polyester fiber is used as cushioning and insulating material in pillows, comforters and upholstery padding.</p>
+    <p>Polyester is popular because it's cheap, it's washable, and it usually doesn't fade or wrinkle.</p>
+
+    <h5 id="item-2-4">4)Linear blends with cotton</h5>
+    <img src="img/Blend.png" alt="" style="width:5cm">
+    <p>Poly-blend, originally, referred to combining two or more different poly materials to make a separate material.</p>
+    <p>This method creates a textile which is a blend of both polyester and natural fibres.</p>
+    <p>The more popular examples of these would be poly-cotton, linen blends or terrycot.</p>
+    <img src="img/Parth.png" alt="" style="width:5cm">
+    <p>A polyester/cotton blend is somewhat breathable, but if the level of breathability is one of the most important things on your list, then 100% cotton may be a better choice.</p>
+    <p>the material isn't synthetic, it allows for more air-flow, and is a good choice for very warm climates.</p>
+    <p> polyester doesn't shrink or change shape like cotton does, this blend is easier to wash and dry. </p>
+
+    <h5 id="item-2-5">5)Double Yarn </h5>
+    <img src="img/DoubleYarn.png" alt="" style="width:5cm">
+    <p>This yarn is created by twisting two or more yarns or single threads produced during twisting at head for example on ring spinning machines.</p>
+    <p>Doubled yarns can be made by a regular twist - smooth twisting or as textured yarns with different colours or volumes.</p>
+    <p> a compound cloth consisting of two distinct fabrics united at regular intervals by having a thread of warp or filling passing from one to the other and used especially for coating, blankets, and upholstery.</p>
+    <img src="img/Double2.png" alt="" style="width:5cm">
+    <p>Double cloth or double weave is a kind of woven textile in which two or more sets of warps and one or more sets of weft or filling yarns are interconnected to form </p>
+    <p>This yarn is created by twisting two or more yarns or single threads produced during twisting at head for example on ring spinning machines.</p>
+    <p>Doubled yarns can be made by a regular twist - smooth twisting or as textured yarns with different colours or volumes.</p>
+
+
+    <h5 id="item-2-6">6)Gassed Yarn </h5>
+    <img src="img/Gassed.png" alt="" style="width:5cm">
+    <p>Gassed yarn is mercerized cotton yarn that has been exposed very rapidly to a hot gas flame.</p>
+    <p>This process removes any fuzz or excess lint on the thread. This results in a brighter and smoother appearance.</p>
+    <p>Mercerisation is a textile finishing treatment for cellulose fabric and yarn, mainly cotton and flax, which improves dye uptake and tear strength, reduces fabric shrinkage, and imparts a silk-like luster.</p>
+    <img src="img/Gassed2.png" alt="" style="width:5cm">
+    <p>textile finishing treatment for cellulose fabric and yarn, mainly cotton and flax, which improves dye uptake and tear strength, reduces fabric shrinkage, and imparts a silk-like luster.</p>
+    <p> It is a softer version of regular cotton.</p>
+    <p>It's made by further treating the cotton after it's been picked, then spun into yarn. </p>
+
+
+  </div>
+  </div>
+</div>
+  </nav>
+
+<p>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Products in Meters (MTR)</option>
+      <option value="1">5-10 Meter</option>
+      <option value="2">10-15 Meter</option>
+      <option value="3">15-50 Meter</option>
+      <option value="1">50-200 Meter</option>
+      <option value="2">200-500 Meter</option>
+      <option value="3">After 500 Meters </option>
+    </select>
+  </p></p>
+  <u><p><h2> Product Review : </h2></p></u>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Very Good
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+      <label class="form-check-label" for="flexRadioDefault2">
+        Good
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+      <label class="form-check-label" for="flexRadioDefault2">
+        Average
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+      <label class="form-check-label" for="flexRadioDefault2">
+        Bad
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+      <label class="form-check-label" for="flexRadioDefault2">
+        Very Bad
+      </label>
+    </div>
+
+    <!--FOOTER-------------------------------------------------------->
+
+                <footer style="background-color: black; color: aliceblue;">
+                  <div class="container" ><br>
+                    <div class="row">
+                      <div class="col-sm center " style="text-align: center;">
+                        <a href="#" style="color: skyblue;">Terms & Condition        </a><br>
+                        <a href="#" style="color: skyblue;">Privacy Policy     </a><br><br>
+                      </div>
+                      <div class="col-sm  center " style="text-align: center;">
+                        <a href="#" style="color: skyblue;">About  </a><br>
+                            <a href="#contact_us" style="color: skyblue;">Contact us        </a><br><br>
+
+                      </div>
+                      <div class="col-sm  center " style="text-align: center;">
+                        <a href="Complain.html" style="color: skyblue;">Contact Us   </a><br>
+                        <a href="#" style="color: skyblue;">&copy;Om Sagar Textile    </a><br><br>
+                      </div>
+                    </div>
+                  </div>
+
+                </footer>
+
+                <script
+                src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+                integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+             integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
+ </body>
+</html>
