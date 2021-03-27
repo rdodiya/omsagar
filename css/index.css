@@ -22,3 +22,6 @@ position:absolute !important;
     border: 1px solid rgba(0,0,0,.125) !important;
     border-radius: .25rem !important;
 }
+div#founder_details iframe{
+    padding-bottom: 5mm;
+}
