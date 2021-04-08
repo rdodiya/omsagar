@@ -37,7 +37,7 @@
   .section-head h4 span{
     font-weight: 700;
     padding-bottom: 5px;
-    color:#2f2f2f;
+    color:var(--title-color);
   } 
   .section-head p{
     color:#818181;
@@ -46,7 +46,7 @@
     text-align: center;
   }
   .item{
-    background:#fff;
+    background: var(--item-background);
     text-align: center;
     padding:30px 25px;
     box-shadow: 0 0 25px rgba(0,0,0,0.07);
@@ -57,21 +57,21 @@
     transition:all 0.5s ease 0s;
   }
   .item:hover{
-    background:#0075a2;
+    background:var(--item-hover);
     box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
     -webkit-transition:all 0.5s ease 0s;
     transition:all 0.5s ease 0s;
   }
   .item:hover .item,
   .item:hover span.icon{
-    background:#fff;
+    background:var();
     border-radius: 10px;
     -webkit-transition:all 0.5s ease 0s;
     transition:all 0.5s ease 0s;
   }
   .item:hover h6,
   .item:hover p{
-    color:#fff;
+    color:var(--primary-color);
     -webkit-transition:all 0.5s ease 0s;
     transition:all 0.5s ease 0s;
   }
@@ -114,7 +114,31 @@
   }
   .item h6{
     margin-bottom: 20px;
-    color:#2f2f2f;
+    color:var(--title-color);
   }
   
     
+:root{
+  --primary-color: aliceblue;
+  --secondary-color: black;
+  --title-color: #0067e6;
+    --item-background:#fff;
+  --item-hover: #0075a2;
+}
+
+  [data-theme="dark"] {
+    --primary-color: black;
+    --secondary-color: white;
+    --title-color: #fec150;
+    --item-background:#0075a2;
+    --item-hover: #fff;
+  }
+
+.heading{
+    color:  var(--title-color);
+}
+body{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+/*2f2f2f
