@@ -85,6 +85,39 @@ button:hover {
  animation-iteration-count: 1;
 }
 
+
+form{
+
+  white-space: nowrap;
+  overflow: hidden;    
+  text-align: justify;
+
+}
+
+/* Animation */
+form {
+  animation: animated-text 2s linear 1s 1 normal both,
+             animated-cursor 600ms linear infinite;
+  position: sticky;
+}
+
+
+
+/* text animation */
+
+@keyframes animated-text{
+  from{max-width: 0;text-align: justify;visibility: hidden;}
+  to{max-width: 100%;text-align: justify;visibility: visible;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: var(--border-cursor-color); }
+  to{border-right-color: transparent;}
+}
+
+
 @keyframes swing {
   15% {
     -webkit-transform: translateX(5px);
