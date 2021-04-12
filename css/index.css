@@ -24,4 +24,25 @@ position:absolute !important;
 }
 div#founder_details iframe{
     padding-bottom: 5mm;
+    padding-left: 5mm;
+}
+:root{
+  --primary-color: aliceblue;
+  --secondary-color: black;
+  --form-background:rgba(0, 0, 0, 0.233);
+  --title-color: #0067e6;
+}
+
+  [data-theme="dark"] {
+    --primary-color: black;
+    --secondary-color: white;
+    --title-color: #fec150;
+  }
+
+.h2{
+    color: var(--title-color);
+}
+.index_body{
+    background: var(--primary-color);
+    color: var(--secondary-color);
 }
