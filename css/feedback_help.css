@@ -16,6 +16,8 @@
   
   .heading{
       color: var(--title-color);
+      padding-top: 5mm;
+      padding-bottom: 5mm;
   }
   
   body{
@@ -44,6 +46,8 @@ button:hover {
  animation: swing 1s ease;
  animation-iteration-count: 1;
 }
+
+
 form,.card,.heading{
 
   white-space: nowrap;
@@ -53,12 +57,24 @@ form,.card,.heading{
 }
 
 /* Animation */
-form,.card,.heading  {
-  animation: animated-text 2s linear 1s 1 normal both,
+form,.card  {
+  animation: animated-text 1s linear 1s 1 normal both,
              animated-cursor 600ms linear infinite;
   position: sticky;
 }
 
+.heading {
+  animation: animated-heading 1s linear 1s 1 normal both,
+             animated-cursor 600ms linear infinite;
+
+}
+
+/* heading animation */
+
+@keyframes animated-heading{
+  from{max-height: 0;text-align: justify;visibility: hidden;}
+  to{max-height: 80px;text-align: justify;visibility: visible;}
+}
 
 
 /* text animation */

@@ -31,6 +31,8 @@ div#founder_details iframe{
   --secondary-color: black;
   --form-background:rgba(0, 0, 0, 0.233);
   --title-color: #0067e6;
+  
+  --border-cursor-color : rgba(255,255,255,.75);
 }
 
   [data-theme="dark"] {
@@ -45,4 +47,52 @@ div#founder_details iframe{
 .index_body{
     background: var(--primary-color);
     color: var(--secondary-color);
+}
+
+/* ANIMATION */
+
+
+.card,.text-center,#map-container-google-11,.heading,.embed-responsive,.founder_video,.founder_info,#carouselExampleIndicators,#founder {
+
+  white-space: nowrap;
+  overflow: hidden;    
+  text-align: justify;
+
+}
+
+
+.heading,.embed-responsive,.founder_video,.founder_info,#carouselExampleIndicators {
+  animation: animated-heading 1s linear 1s 1 normal both,
+             animated-cursor 600ms linear infinite;
+
+}
+
+/* heading animation */
+
+@keyframes animated-heading{
+  from{max-height: 0;text-align: justify;visibility: hidden;}
+  to{max-height: 1000px;text-align: justify;visibility: visible;}
+}
+
+/* Animation */
+.card,.text-center,#map-container-google-11  {
+  animation: animated-text 1s linear 1s 1 normal both,
+             animated-cursor 600ms linear infinite;
+  position: sticky;
+}
+
+
+
+/* text animation */
+
+@keyframes animated-text{
+  from{max-width: 0;text-align: justify;visibility: hidden;}
+  to{max-width: 100%;text-align: justify;visibility: visible;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: var(--border-cursor-color); }
+  to{border-right-color: transparent;}
 }
