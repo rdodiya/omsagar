@@ -1,10 +1,10 @@
 
 :root{
   --primary-color: aliceblue;
-  --secondary-color: black;
+  --secondary-color: #0075A2;
   --form-background:rgba(0, 0, 0, 0.233);
-  --title-color: #0067e6;
-  
+  --title-color: #0075A2;
+
   --border-cursor-color : rgba(255,255,255,.75);
 }
 
@@ -21,6 +21,7 @@
 body{
   background-color: var(--primary-color);
   color: var(--secondary-color) ;
+  font-family: "Comic Sans MS";
 }
 .fieldset_div{
   background-color: var(--form-background);
@@ -91,7 +92,7 @@ button:hover {
 h1,form{
 
   white-space: nowrap;
-  overflow: hidden;    
+  overflow: hidden;
   text-align: justify;
 
 }

@@ -1,7 +1,7 @@
 
 .container1{
     padding:3rem 0;
-   
+
   }
   .first_card{
     background: #dfe7f2;
@@ -30,7 +30,7 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     max-width: 960px;
     padding-bottom: 5mm;
-    
+
   }
   .title{
     font-size: 1.1rem;
@@ -42,19 +42,19 @@
     color: var(--title-color);
   }
   .description{
-  
+
     color:#94908d;
     font-size: 0.9rem;
     font-weight: 500;
     margin:0;
     text-align: justify;
-    
-    
+
+
   }
   .bottom-space{
     padding-bottom: 5mm;
   }
-  
+
   .arrow_btn{
     background: none;
     border: none;
@@ -76,65 +76,64 @@
   }
 }
 
-      /* Initially, hide the extra text that 
-  
-          can be revealed with the button */ 
-  
-        #moreText { 
-            /* Display nothing for the element */ 
-    
-            display: none; 
-    
+      /* Initially, hide the extra text that
+
+          can be revealed with the button */
+
+        #moreText {
+            /* Display nothing for the element */
+
+            display: none;
+
         }
-        #moreText2 { 
-            /* Display nothing for the element */ 
-    
-            display: none; 
-    
-        }  
-        #moreText3 { 
-            /* Display nothing for the element */ 
-    
-            display: none; 
-    
-        }   
-        #moreText4 { 
-            /* Display nothing for the element */ 
-    
-            display: none; 
-    
-        }   
-        #moreText5 { 
-            /* Display nothing for the element */ 
-    
-            display: none; 
-    
+        #moreText2 {
+            /* Display nothing for the element */
+
+            display: none;
+
         }
-        #moreText6 { 
-          /* Display nothing for the element */ 
-  
-          display: none; 
-  
+        #moreText3 {
+            /* Display nothing for the element */
+
+            display: none;
+
+        }
+        #moreText4 {
+            /* Display nothing for the element */
+
+            display: none;
+
+        }
+        #moreText5 {
+            /* Display nothing for the element */
+
+            display: none;
+
+        }
+        #moreText6 {
+          /* Display nothing for the element */
+
+          display: none;
+
       }
-      #moreText7 { 
-        /* Display nothing for the element */ 
-  
-        display: none; 
-  
+      #moreText7 {
+        /* Display nothing for the element */
+
+        display: none;
+
     }
-    #moreText8 { 
-      /* Display nothing for the element */ 
-  
-      display: none; 
-  
+    #moreText8 {
+      /* Display nothing for the element */
+
+      display: none;
+
   }
 
- 
+
 :root{
   --primary-color: aliceblue;
-  --secondary-color: black;
-  --title-color: #0067e6;
-  
+  --secondary-color: #0075A2;
+  --title-color: ##0075A2;
   --border-cursor-color : rgba(255,255,255,.75);
 }
 
@@ -143,16 +142,17 @@
     --secondary-color: white;
     --title-color: #fec150;
   }
- 
-  body{
-    font-family: "Poppins", sans-serif;
+
+body{
+    /* font-family: "Poppins", sans-serif; */
     background: var(--primary-color);
     color: var(--secondary-color);
+    font-family: "Comic Sans MS";
 }
 form{
 background-color: var(--form-bg);
 }
-  
+
 /* TOGGLE  */
 .theme-switch-wrapper {
 display: flex;
@@ -239,4 +239,3 @@ transform: translateX(-4px);
 }
 
 /*     ANIMATION  */
-
