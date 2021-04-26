@@ -134,6 +134,8 @@
   --primary-color: aliceblue;
   --secondary-color: black;
   --title-color: #0067e6;
+  
+  --border-cursor-color : rgba(255,255,255,.75);
 }
 
   [data-theme="dark"] {
@@ -235,4 +237,6 @@ input:checked + .slider .feather-sun {
 opacity: 0;
 transform: translateX(-4px);
 }
+
+/*     ANIMATION  */
 

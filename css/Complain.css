@@ -4,6 +4,8 @@
   --secondary-color: black;
   --form-background:rgba(0, 0, 0, 0.233);
   --title-color: #0067e6;
+  
+  --border-cursor-color : rgba(255,255,255,.75);
 }
 
   [data-theme="dark"] {
@@ -84,6 +86,53 @@ button:hover {
  animation: swing 1s ease;
  animation-iteration-count: 1;
 }
+
+
+h1,form{
+
+  white-space: nowrap;
+  overflow: hidden;    
+  text-align: justify;
+
+}
+
+/* Animation */
+form {
+  animation: animated-text 1s linear 1s 1 normal both,
+             animated-cursor 600ms linear infinite;
+  padding-top: 5mm;
+}
+h1 {
+  animation: animated-h1 1s linear 1s 1 normal both,
+             animated-cursor 600ms linear infinite;
+  position: sticky;
+}
+
+
+
+/* h1 animation */
+
+@keyframes animated-h1{
+  from{max-height: 0;text-align: justify;visibility: hidden;}
+  to{max-height: 100px;text-align: justify;visibility: visible;}
+}
+
+
+
+/* form animation */
+
+@keyframes animated-text{
+  from{max-width: 0;text-align: justify;visibility: hidden;}
+  to{max-width: 100%;text-align: justify;visibility: visible;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: var(--border-cursor-color); }
+  to{border-right-color: transparent;}
+}
+
 
 @keyframes swing {
   15% {

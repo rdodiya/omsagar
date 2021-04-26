@@ -4,16 +4,20 @@
     --secondary-color: black;
     --form-background:rgba(0, 0, 0, 0.233);
     --title-color: #0067e6;
+    --border-cursor-color : rgba(255,255,255,.75);
   }
   
     [data-theme="dark"] {
       --primary-color: black;
       --secondary-color: white;
       --title-color: #fec150;
+      --border-cursor-color : black;
     }
   
   .heading{
       color: var(--title-color);
+      padding-top: 5mm;
+      padding-bottom: 5mm;
   }
   
   body{
@@ -34,13 +38,57 @@ button {
   background-color: #292D3E;
   border: 1px solid #1D9AF2;
   border-radius: 4px;
-  padding: 0 15px;
+  padding: 0 15x;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 button:hover {
  animation: swing 1s ease;
  animation-iteration-count: 1;
+}
+
+
+form,.card,.heading{
+
+  white-space: nowrap;
+  overflow: hidden;    
+  text-align: justify;
+
+}
+
+/* Animation */
+form,.card  {
+  animation: animated-text 1s linear 1s 1 normal both,
+             animated-cursor 600ms linear infinite;
+  position: sticky;
+}
+
+.heading {
+  animation: animated-heading 1s linear 1s 1 normal both,
+             animated-cursor 600ms linear infinite;
+
+}
+
+/* heading animation */
+
+@keyframes animated-heading{
+  from{max-height: 0;text-align: justify;visibility: hidden;}
+  to{max-height: 80px;text-align: justify;visibility: visible;}
+}
+
+
+/* text animation */
+
+@keyframes animated-text{
+  from{max-width: 0;text-align: justify;visibility: hidden;}
+  to{max-width: 100%;text-align: justify;visibility: visible;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: var(--border-cursor-color); }
+  to{border-right-color: transparent;}
 }
 
 @keyframes swing {

@@ -568,17 +568,29 @@ function toggleText8()
 
 } 
 //---------------------------------------------------------------
+var select_id
+function GFG_click(clicked) {
+        select_id= clicked;
+}   
+ var c=[0,0,0,0,0,0,0,0];//  0 for downimage // 1 for topimage
 function changeImage()
-{
-            var img = document.getElementById("image");
-            if(img.src=="img/top_arrow.png")
+{          
+            var image = document.getElementById(select_id);
+            if(image.src="img/down_arrow.png" | c[select_id-1]==0)
             {
-              img.src="img/down_arrow.png";
+                image.src = 'img/top_arrow.png';
+                c[select_id-1]=1;
             }
-            else
+            else if(image.src="img/top_arrow.png" | c[select_id-1]==1)
             {
-              img.src="img/top_arrow.png";
+                image.src = 'img/down_arrow.png';
+                c[select_id-1]=0;
             }
+            else{
+                image.src = 'img/down_arrow.png';
+            }
+            console.log("IMAGE HAS BEEN CHANGED",c);
+        
 }
 //-------------------------------------------------------------------------
 
