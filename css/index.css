@@ -17,7 +17,8 @@ position:absolute !important;
     flex-direction: column !important;
     min-width: 0 !important;
     word-wrap: break-word !important;
-    background-color: #ab8989 !important;
+    /* background-color: #e6e6e6 !important; */
+    background-color: var(--contactBox) !important;
     background-clip: border-box !important;
     border: 1px solid rgba(0,0,0,.125) !important;
     border-radius: .25rem !important;
@@ -80,10 +81,10 @@ div#founder_details iframe{
 }
 :root{
   --primary-color: aliceblue;
-  --secondary-color: black;
+  --secondary-color: #0075A2;
   --form-background:#0000003b;
   --title-color: #0067e6;
-  
+  --contactBox: #e6e6e6;
   --border-cursor-color : rgba(255,255,255,.75);
 }
 
@@ -91,14 +92,17 @@ div#founder_details iframe{
     --primary-color: black;
     --secondary-color: white;
     --title-color: #fec150;
+    --contactBox: #0075A2;
   }
 
 .h2{
     color: var(--title-color);
+    font-family: "Comic Sans MS";
 }
 .index_body{
     background: var(--primary-color);
     color: var(--secondary-color);
+    font-family: "Comic Sans MS";
 }
 
 /* ANIMATION */
@@ -107,9 +111,9 @@ div#founder_details iframe{
 .card,.text-center,#map-container-google-11,.heading,.embed-responsive,.founder_video,.founder_info,#carouselExampleIndicators,#founder {
 
   white-space: nowrap;
-  overflow: hidden;    
+  overflow: hidden;
   text-align: justify;
-
+  font-family: "Comic Sans MS";
 }
 
 

@@ -8,7 +8,10 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+body{
+	font-family: "Comic Sans MS";
+	color: #0075A2;
+}
 /* Main container */
 .cbp-vm-switcher {
 	padding: 20px;
@@ -55,14 +58,14 @@
 }
 
 /* Clear eventual floats */
-.cbp-vm-switcher ul:before, 
-.cbp-vm-switcher ul:after { 
-	content: " "; 
-	display: table; 
+.cbp-vm-switcher ul:before,
+.cbp-vm-switcher ul:after {
+	content: " ";
+	display: table;
 }
 
-.cbp-vm-switcher ul:after { 
-	clear: both; 
+.cbp-vm-switcher ul:after {
+	clear: both;
 }
 
 .cbp-vm-switcher ul li {
@@ -146,7 +149,7 @@
 	max-width: 300px;
 	min-height: 70px;
 	margin: 0 auto;
-} 
+}
 
 .cbp-vm-view-grid .cbp-vm-price {
 	margin: 10px 0;
@@ -199,7 +202,7 @@
 	.cbp-vm-view-list .cbp-vm-details  {
 		width: 30%;
 	}
-} 
+}
 
 @media screen and (max-width: 57em) {
 	.cbp-vm-view-grid ul li {
