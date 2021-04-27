@@ -129,14 +129,14 @@
 
 <section>
 <strong><h1 class="text-center heading "> Feedback Form </h1></strong>
-  <form  class="form-floating"  method="post">
+  <form  class="form-floating"  method="post" action="javascript:sendMail()">
     <div class="form-group">
     <fieldset >
         <legend></legend>
         <div class="container "  style="background-color: rgba(0, 0, 0, 0.233);border-radius: 5mm;padding-bottom: 5mm;">
         <div class="mb-3"><br>
           <label for="textInput" class="form-label">Name</label>
-          <input type="text" id="TextInput" class="form-control" placeholder="Enter full name">
+          <input type="text" id="form-name" class="form-control" placeholder="Enter full name">
         </div>
         <label for="exampleFormControlInput1" class="form-label">Phone</label>
         <div class="input-group mb-3">
@@ -147,64 +147,45 @@
                 <option value="4">***</option>
                 <option value="5">***</option>
             </select>
-            <input type="textInput" class="form-control" aria-label="Text input with dropdown button" placeholder="" style="background-color:white;">
+            <input type="textInput" id="form-phone" class="form-control" aria-label="Text input with dropdown button" placeholder="" style="background-color:white;">
         </div>
 
 
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input type="email" class="form-control" id="form-email" placeholder="name@example.com">
         </div>
 
-        <div class="mb-3"><label for="" class="form-label"> Service</label><select  name="Service * " class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+        <div class="mb-3">
+          <label for="" class="form-label"> Service</label>
+          <select  id="form-service" name="Service * " class="form-select form-select-sm" aria-label=".form-select-sm example" required>
             <option selected>---Select---</option>
             <option value="1">poor</option>
             <option value="2">Ok</option>
             <option value="3">Good</option>
             <option value="4">Better</option>
             <option value="5">Best</option>
-      </select></div>
-      <div class="mb-3"><label for="" class="form-label">Product Quality</label> <select  name="Service * " class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+          </select>
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Product Quality</label>
+        <select  id="form-quality" name="Service * " class="form-select form-select-sm" aria-label=".form-select-sm example" required>
         <option selected>---Select---</option>
         <option value="1">poor</option>
         <option value="2">Ok</option>
         <option value="3">Good</option>
         <option value="4">Better</option>
         <option value="5">Best</option>
-
-
-      </select></div>
+        </select>
+      </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea id="form-text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-
-
-      <input class="btn btn-primary" type="reset" value="Reset">
+  <input class="btn btn-primary" type="reset" value="Reset">
       &nbsp;&nbsp;
-
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="tooltip" data-target="#exampleModalCenter" data-placement="bottom" title="click here to submit form" type="submit" value="Submit">
-                Submit
-              </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Confirmation</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      To submit it please click on submit button ,otherwise click on cancel.
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                      <!-- <button type="button" class="btn btn-primary">Submit</button> -->
-                      <input type="button" value="Send Email" onclick="sendEmail()" />
+    <input type="button" class="btn btn-success" value="Submit" onclick="sendMail()" />
     </fieldset>
   </div>
   </form>
@@ -331,5 +312,63 @@
 
 <!-- from here it is for email -->
       <script src="https://smtpjs.com/v3/smtp.js"></script>
-        </body>
+  </body>
+  <!--add jquery for cart-->
+  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+  function sendMail(){
+    var Mname = $('#form-name').val();
+    var Memail = $('#form-email').val();
+    var Mphone = $('#form-phone').val();
+    var Mservice = $('#form-service').val();
+    if(Mservice == 1){
+      Mservice = "Poor";
+    } else if(Mservice == 2){
+      Mservice = "Ok";
+    } else if (Mservice == 3){
+      Mservice = "Good";
+    } else if (Mservice == 4 ){
+      Mservice = "Better";
+    } else {
+      Mservice = "Best";
+    }
+
+
+    var Mquality = $('#form-quality').val();
+    if(Mquality == 1){
+      Mquality = "Poor";
+    } else if(Mquality == 2){
+      Mquality = "Ok";
+    } else if (Mquality == 3){
+      Mquality = "Good";
+    } else if (Mquality == 4 ){
+      Mquality = "Better";
+    } else {
+      Mquality = "Best";
+    }
+
+
+    var Mtext = $('#form-text').val();
+    var Mbody = 'Details<br>Name: '+Mname+'<br>Email: '+Memail+'<br>Phone number: '+Mphone+'<br>service Review: '+Mservice+'<br>Quality : '+Mquality+'<br>Text: '+Mtext;
+      Email.send({
+      // Host : "smtp.gmail.com",
+      // Username : "omsagar6654@gmail.com",
+      SecureToken: "127e16a9-a597-41f7-9323-7251ac5e1842",
+      To : '19ce005@charusat.edu.in',
+      From : "omsagar6654@gmail.com",
+      Subject : "FeedBack from " + Mname,
+      Body : Mbody
+    }).then(
+      message =>{
+          if(message=='OK'){
+            alert('Thank you, your email has been send Successfully');
+          } else {
+            alert('Error in sending email. Try again..');
+          }
+      }
+    );
+  }
+  </script>
 </html>
