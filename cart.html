@@ -8,13 +8,14 @@
     <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
     <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
     <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/footer_file.css">
+       <!-- Bootstrap CSS -->
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+       <link rel="stylesheet" href="css/footer_file.css">
+       
+    <link rel="stylesheet" href="css/Complain.css">
     <link rel="stylesheet" href="css/dark_mode.css">
     <style media="screen">
-        
-                    
+           
             :root{
             --primary-color: aliceblue;
             --secondary-color: black;
@@ -181,7 +182,7 @@
                                       <svg xmlns="http://www.w3.org/2000/svg" style="color: white;" width="25" height="25" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
                                           <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
                                       </svg>
-                                  </a>
+                                  </a><span class="total-count"></span>
                               </li>
                           </ul>
               </div>
@@ -190,8 +191,99 @@
   </nav>
 
  <!-- this is body part----->
-/
-  <div class="container">
+ 
+<br><br><br>    
+ <div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="heading">Product</th>
+                <th class="heading">Price</th>
+                <th class="text-center heading">Quantity</th>
+                <th class="heading"> </th>
+                <th class="text-center heading">Total Price</th>
+              
+            </tr>
+        </thead>
+        <table class="show-cart table"></table>
+    </table>
+    <div>Total price: $<span class="total-cart"></span></div>
+ 
+  <div class="footer">
+
+  </button><button class="clear-cart btn btn-danger">Clear Cart</button>  
+   <!-- Button trigger modal -->
+  <button id="myBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"  type="submit" value="Submit">
+      Order Now
+    </button>
+
+  </div>
+
+                                     
+                                                            
+                                          <!-- The Modal -->
+                                          <div id="myModal" class="modal">
+                      
+                                            <!-- Modal content -->
+                                            <div class="modal-content" >
+                                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Fill Below Form</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <form action="thankyou.html" method="get" >
+                                                        <fieldset >
+                                                              <div class="fieldset_div container" >
+                                                              <div class="mb-3"><br>
+                                                                  <label for="textInput" class="form-label">Name *</label>
+                                                                    <input type="text" id="TextInput" class="form-control" placeholder="Enter full name">
+                                                              </div>
+                                            
+                                                              <label for="exampleFormControlInput1" class="form-label">Phone</label>
+                                                              <div class="input-group mb-3">
+                                                                  <select  class="form-select-sm" aria-label=".form-select-sm example" style="width: 25%;" required>
+                                                                      <option value="1">+91</option>
+                                                                      <option value="2">0281</option>
+                                                                      <option value="3">+241</option>
+                                                                      <option value="4">***</option>
+                                                                      <option value="5">***</option>
+                                                                  </select>
+                                                                  <input type="textInput" class="form-control" aria-label="Text input with dropdown button" placeholder="" >
+                                                              </div>
+                                                              <div class="mb-3">
+                                                                <label for="exampleFormControlInput1" class="form-label">Email address *</label>
+                                                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                              </div>
+                                            
+                                                              <div class="mb-3">
+                                                                <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              </div>
+                                            
+                                                                
+                                                                      </div>
+                                                        </fieldset>
+                                                      </form>
+                                                </div>
+                                                  <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cance  </button>
+                                                    <button type="button submit" class="btn btn-primary ">Submit</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                              
+                                            </div>
+                      
+</div>  
+
+
+<br><br><br>    
+  <!-- <div class="container">
       <div class="row">
           <div class="col-sm-12 col-md-15 col-md-offset-1">
               <table class="table table-hover">
@@ -265,7 +357,7 @@
           </div>
       </div>
   </div>
-
+ -->
 <br><br><br><br><br>
 <!-- footer ------------------------------------------------------------------------------------------------>
                 <div class="footer">
@@ -291,13 +383,24 @@
                   </footer>
                 </div>
 <!-------------------------------------------------------------------------------------------->
-      <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
-      integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-   integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
-  </script>
-   <script src="javascript/dark_mode.js"></script>
+<script
+src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
+</script>
+<script src="javascript/complain.js"></script>
+<!--add jquery for cart-->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+  <!--add jquery for cart-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <script src="javascript/dark_mode.js"></script>
+  <script src="javascript/shopping.js"></script>
+  <script src="javascript/cart.js"></script>
 </body>
 </html>
