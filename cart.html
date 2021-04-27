@@ -41,6 +41,11 @@
                 background: var(--primary-color);
                 color: var(--secondary-color);
             }
+            td,
+            th{
+              width: 25%;
+            }
+          
 
             /* Animation */
 
@@ -199,15 +204,15 @@
             <tr>
                 <th class="heading">Product</th>
                 <th class="heading">Price</th>
-                <th class="text-center heading">Quantity</th>
+                <th class="heading" style="text-align: center;">Quantity</th>
                 <th class="heading"> </th>
-                <th class="text-center heading">Total Price</th>
+                <th class="heading" style="text-align: right;">Total Price</th>
 
             </tr>
         </thead>
         <table class="show-cart table"></table>
     </table>
-    <div>Total price: $<span class="total-cart"></span></div>
+    <div>Total price: $<span class="total-cart"></span></div><br><br>
 
   <div class="footer">
 
@@ -281,7 +286,7 @@
 
 <br><br><br><br><br>
 <!-- footer ------------------------------------------------------------------------------------------------>
-                <div class="footer">
+                <div class="footer  position-absolute top-100 start-50 translate-middle">
                   <footer style="background-color: black; background-color: #86c5da !important;">
                     <div class="container" ><br>
                       <div class="row">
