@@ -32,7 +32,9 @@
             .heading{
                 color: var(--title-color);
             }
-
+          .required-star{
+            color: red;
+          }
             body{
                 background-color: var(--primary-color);
                 color: var(--secondary-color) ;
@@ -236,41 +238,61 @@
                                                     </button>
                                                   </div>
                                                   <div class="modal-body" >
-                                                    <form action="javascript:sendMail()" method="post" >
+                                                    <form class="was-validated form-floating needs-validation" action="javascript:sendMail()" method="post"  novalidate>
                                                         <fieldset >
                                                               <div class="fieldset_div container" >
                                                               <div class="mb-3"><br>
-                                                                  <label for="textInput" class="form-label">Name *</label>
-                                                                    <input type="text" id="form-name" class="form-control" placeholder="Enter full name">
+                                                                  <label for="textInput" class="form-label">Name <span class="required-star">*</span></label>
+                                                                    <input type="text" id="form-name" class="form-control " placeholder="Enter full name" required>
                                                               </div>
 
-                                                              <label for="exampleFormControlInput1" class="form-label">Phone *</label>
+                                                              <label for="exampleFormControlInput1" class="form-label">Phone <span class="required-star">*</span></label>
                                                               <div class="input-group mb-3">
-                                                                  <select  class="form-select-sm" aria-label=".form-select-sm example" style="width: 25%;" required>
+                                                                  <select  class="form-select-sm is-invalid" aria-label=".form-select-sm example" style="width: 25%;" required>
                                                                       <option value="1">+91</option>
                                                                       <option value="2">0281</option>
                                                                       <option value="3">+241</option>
                                                                       <option value="4">***</option>
                                                                       <option value="5">***</option>
                                                                   </select>
-                                                                  <input id="form-phone"type="textInput" class="form-control" aria-label="Text input with dropdown button" placeholder="" >
+                                                                  <input id="form-phone"type="tel" class="form-control"  pattern="[0-9]{10}"  aria-label="Text input with dropdown button"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="number must be of size 10 " placeholder="" required>
                                                               </div>
                                                               <div class="mb-3">
-                                                                <label for="exampleFormControlInput1" class="form-label">Email address *</label>
-                                                                <input id="form-email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                                <label for="exampleFormControlInput1" class="form-label">Email address <span class="required-star">*</span></label>
+                                                                <input id="form-email" type="email" class="form-control " id="exampleFormControlInput1" placeholder="name@example.com" required>
                                                               </div>
-
+                                                              <div>
+                                                                <label for="validationServer03" class="form-label">State</label>
+                                                            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                              Please provide a valid state.
+                                                            </div>    
+                                                            <div>
+                                                              <label for="validationServer04" class="form-label">City</label>
+                                                            <input type="text" class="form-control" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                                            <div id="validationServer04Feedback" class="invalid-feedback">
+                                                              Please provide a valid city.
+                                                            </div>
+    </div>
+                                                              </div>
                                                               <div class="mb-3">
-                                                                <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                                                                <textarea class="form-control" id="form-text" rows="3"></textarea>
+                                                                <label for="exampleFormControlTextarea1" class="form-label">Address<span class="required-star">*</span></label>
+                                                                <textarea class="form-control is-invalid" id="form-text" rows="3" required></textarea>
+                                                              </div>
+                                                              <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+                                                                 <label class="form-check-label" for="validationFormCheck1">   Agree to terms and conditions</label>
+                                                                   <div class="invalid-feedback">        You must agree before submitting.
+                                                                  </div>
                                                               </div>
                                                             </div>
                                                         </fieldset>
                                                       </form>
                                                 </div>
                                                   <div class="modal-footer">
-                                                    <!-- <button type="button submit" class="btn btn-primary ">Submit</button> -->
-                                                    <input type="button" class="btn btn-success" value="Submit" onclick="sendMail()" />
+                                                    <!-- <button type="submit" id="submit-btn" class="btn btn-success" > Submit</button> -->
+
+                                                    <input type="submit" class="btn btn-success" value="Submit" onclick="sendMail();"/>
                                                   </div>
                                                 </div>
                                               </div>
@@ -316,7 +338,7 @@ integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/N
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
 integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
 </script>
-<script src="javascript/complain.js"></script>
+<!-- <script src="javascript/complain.js"></script> -->
 <!--add jquery for cart-->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
@@ -379,7 +401,7 @@ integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQO
       Email.send({
 
       SecureToken: "127e16a9-a597-41f7-9323-7251ac5e1842",
-      To : '19ce005@charusat.edu.in',
+      To : '19ce023@charusat.edu.in',
       From : "omsagar6654@gmail.com",
       Subject : "Product Order from " + Mname,
       Body : Mbody
@@ -393,5 +415,59 @@ integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQO
       }
     );
   }
+  // Prevent Submission without filling required details
+(function () {
+  'use strict';
+  window.addEventListener('load', function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+          form.addClass("is-invalid");
+        }
+        else {
+         
+          $("#submit-btn").addClass("active");
+          sendMail();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+    
+  // Get the button that opens the modal
+  var btn = document.getElementById("modal-submit");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  
+  btn.onclick =function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
   </script>
 </html>
