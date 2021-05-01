@@ -289,19 +289,19 @@
           <form class="" action="javascript:sendMail()" method="post">
           <div class="md-form">
             <label for="form-name"><b>Your name</b></label>
-            <input type="text" id="form-name" class="form-control">
+            <input type="text" id="form-name" class="form-control" required>
 
           </div>
 
           <div class="md-form">
             <label for="form-email"><b>Your Email</b></label>
-            <input type="text" id="form-email" class="form-control">
+            <input type="email" id="form-email" class="form-control" required>
 
           </div>
 
           <div class="md-form">
             <label for="form-Subject"><b>Subject</b></label>
-            <input type="text" id="form-subject" class="form-control">
+            <input type="text" id="form-subject" class="form-control" required>
 
           </div>
 
@@ -313,7 +313,7 @@
 
           <div class="text-center mt-4">
             <!-- <button type="button" class="btn btn-success" >Submit</button> -->
-            <input type="button" class="btn btn-success" value="Send" onclick="sendMail()" />
+            <input type="submit" class="btn btn-success" value="Send" />
           </div>
           </form>
         </div>
@@ -424,7 +424,7 @@
       // Host : "smtp.gmail.com",
       // Username : "omsagar6654@gmail.com",
       SecureToken: "127e16a9-a597-41f7-9323-7251ac5e1842",
-      To : '19ce005@charusat.edu.in',
+      To : '19ce023@charusat.edu.in',
       From : "omsagar6654@gmail.com",
       Subject : "New Mail from " + Mname + " - "+Msub,
       Body : Mbody
@@ -438,5 +438,29 @@
       }
     );
   }
+  // Prevent Submission without filling required details
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          else {
+           
+            $("#submit-btn").addClass("active");
+            event.sendMail();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+ 
   </script>
 </html>

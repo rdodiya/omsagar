@@ -26,6 +26,9 @@
     color: var(--secondary-color) ;
     font-family: "Comic Sans MS";
   }
+  .required-star{
+    color: red;
+  }
 
 .card{
 background: var(--primary-color);
