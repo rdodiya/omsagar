@@ -129,16 +129,16 @@
 
 <section>
 <strong><h1 class="text-center heading "> Feedback Form </h1></strong>
-  <form  class="form-floating"  method="post" action="javascript:sendMail()">
+  <form  class="form-floating needs-validation"  method="post" action="javascript:sendMail()" >
     <div class="form-group">
     <fieldset >
         <legend></legend>
         <div class="container "  style="background-color: rgba(0, 0, 0, 0.233);border-radius: 5mm;padding-bottom: 5mm;">
         <div class="mb-3"><br>
-          <label for="textInput" class="form-label">Name</label>
-          <input type="text" id="form-name" class="form-control" placeholder="Enter full name">
+          <label for="textInput" class="form-label">Name<span class="required-star">*</span></label>
+          <input type="text" id="form-name" class="form-control" placeholder="Enter full name" required>
         </div>
-        <label for="exampleFormControlInput1" class="form-label">Phone</label>
+        <label for="exampleFormControlInput1" class="form-label">Phone<span class="required-star">*</span></label>
         <div class="input-group mb-3">
             <select  class="form-select-sm" aria-label=".form-select-sm example" style="width: 25%;" required>
                 <option value="1">+91</option>
@@ -147,19 +147,19 @@
                 <option value="4">***</option>
                 <option value="5">***</option>
             </select>
-            <input type="textInput" id="form-phone" class="form-control" aria-label="Text input with dropdown button" placeholder="" style="background-color:white;">
+            <input type="tel" id="form-phone" class="form-control"  pattern="[0-9]{10}" aria-label="Text input with dropdown button" placeholder="number must be of size 10 " style="background-color:white;"required>
         </div>
 
 
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="form-email" placeholder="name@example.com">
+          <label for="exampleFormControlInput1" class="form-label">Email addres<span class="required-star">*</span></label>
+          <input type="email" class="form-control" id="form-email" placeholder="name@example.com" required>
         </div>
 
         <div class="mb-3">
-          <label for="" class="form-label"> Service</label>
+          <label for="" class="form-label"> Service<span class="required-star">*</span></label>
           <select  id="form-service" name="Service * " class="form-select form-select-sm" aria-label=".form-select-sm example" required>
-            <option selected>---Select---</option>
+            <option selected disabled value="">---Select---</option>
             <option value="1">poor</option>
             <option value="2">Ok</option>
             <option value="3">Good</option>
@@ -168,9 +168,9 @@
           </select>
       </div>
       <div class="mb-3">
-        <label for="" class="form-label">Product Quality</label>
+        <label for="" class="form-label">Product Quality<span class="required-star">*</span></label>
         <select  id="form-quality" name="Service * " class="form-select form-select-sm" aria-label=".form-select-sm example" required>
-        <option selected>---Select---</option>
+        <option selected disabled value="">---Select---</option>
         <option value="1">poor</option>
         <option value="2">Ok</option>
         <option value="3">Good</option>
@@ -179,13 +179,14 @@
         </select>
       </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <label for="exampleFormControlTextarea1" class="form-label">Extra details</label>
     <textarea id="form-text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <input class="btn btn-primary" type="reset" value="Reset">
       &nbsp;&nbsp;
-              <!-- Button trigger modal -->
-    <input type="button" class="btn btn-success" value="Submit" onclick="sendMail()" />
+   <!-- <input type="button" class="btn btn-success" value="Submit" onclick="sendMail()" /> -->
+   <button type="submit" id="submit-btn" class="btn btn-success"> Submit</button>
+
     </fieldset>
   </div>
   </form>
@@ -409,7 +410,7 @@
       // Host : "smtp.gmail.com",
       // Username : "omsagar6654@gmail.com",
       SecureToken: "127e16a9-a597-41f7-9323-7251ac5e1842",
-      To : '19ce005@charusat.edu.in',
+      To : '19ce023@charusat.edu.in',
       From : "omsagar6654@gmail.com",
       Subject : "FeedBack from " + Mname,
       Body : Mbody
@@ -423,6 +424,29 @@
       }
     );
   }
+
+  // Prevent Submission without filling required details
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          else {
+           
+            $("#submit-btn").addClass("active");
+            event.sendMail();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
   </script>
 </html>
-ō

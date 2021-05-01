@@ -7,10 +7,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Complain</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/Complain.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/Complain.css">
     <link rel="stylesheet" href="css/dark_mode.css">
 </head>
 <body >
@@ -139,12 +137,12 @@
   
        <section>
         <strong><h1 class="text-center heading ">Complain Form</h1></strong>
-          <form action="thankyou.html" method="get" >
+          <form class="form-floating needs-validation" method="get"  id="myForm">
             <fieldset >
                   <div class="fieldset_div container" >
                   <div class="mb-3"><br>
                       <label for="textInput" class="form-label">Name *</label>
-                        <input type="text" id="TextInput" class="form-control" placeholder="Enter full name">
+                        <input type="text" id="TextInput" class="form-control" placeholder="Enter full name" required>
                   </div>
 
                   <label for="exampleFormControlInput1" class="form-label">Phone</label>
@@ -156,50 +154,53 @@
                           <option value="4">***</option>
                           <option value="5">***</option>
                       </select>
-                      <input type="textInput" class="form-control" aria-label="Text input with dropdown button" placeholder="" >
+                      <input type="tel" class="form-control" aria-label="Text input with dropdown button"  pattern="[0-9]{10}" placeholder="" required >
                   </div>
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email address *</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
                   </div>
 
                   <label for="exampleFormControlInput1" class="form-label">Customer Type *</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Customer" id="flexCheckDisabled" >
-                        <label class="form-check-label" for="flexCheckDisabled">
-                          Customer
-                        </label>
-                    </div>
-
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Dealer" id="flexCheckCheckedDisabled" checked >
-                    <label class="form-check-label" for="flexCheckCheckedDisabled">
-                    Dealer
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Customer
                     </label>
                   </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Dealer
+                    </label>
+                  </div>
+                  <br>
 
                   <label for="exampleFormControlInput1" class="form-label">Add File</label>
                     <div class="input-group">
-                      <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                      <button class="btn " type="button" id="upload_btn">Upload</button>
+                      <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="  Upload file having extension .pdf or .jpeg or .png">
+                
                     </div>
-                    <div id="fileHelp" class="form-text">
-                        Upload file having extension .pdf or .jpeg or .png
-                    </div><br>
+                    <br>
 
                   <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Detailed Information</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="exampleFormControlTextarea1" class="form-label"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="If you are submit your complain in attached file then just write 'file attached' in Detailed information .">Detailed Information</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="write your complain here in detail" required></textarea>
+                    
                   </div>
-
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      Agree to terms and conditions
+                    </label>
+                  </div>
                                         <!-- Button trigger modal -->
-                    <button id="myBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"  type="submit" value="Submit">
+                    <button id="modal-submit" type="submit" class="btn btn-primary" value="Submit">
                       Submit
                     </button>
-
-                                      
+                  
                     <!-- The Modal -->
-                    <div id="myModal" class="modal">
+                    <div id="myModal" role="dialog" class="modal">
 
                       <!-- Modal content -->
                       <div class="modal-content modal-responsive`" >
@@ -212,11 +213,10 @@
                               </button>
                             </div>
                             <div class="modal-body">
-                              To submit it please click on submit button ,otherwise click on cancel.
+                              To submit it please click on submit <br> button,  otherwise click on cross.
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="button submit" class="btn btn-primary ">Submit</button>
+                                <button type="button submit" class="btn btn-primary"   onclick="Message1();">Submit</button>
                             </div>
                           </div>
                         </div>
@@ -254,21 +254,19 @@
                   </footer>
                 </div>
 <!-- javascript------------------------------------------------------------->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
-            integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
-        </script>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
-        </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         <script src="javascript/complain.js"></script>
   <!--add jquery for cart-->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          <!-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
         <script src="javascript/dark_mode.js" ></script>
         <script src="javascript/cart.js"></script>
+        <script>
+            function Message1{
+              alert('Thank You.Our team will contact you soon and solve your problem');
+            }
+        </script>
     </body>
 
 </html>
