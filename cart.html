@@ -208,7 +208,7 @@
               <th class="heading" style="text-align: center;">Quantity</th>
               <th class="heading"> </th>
               <th class="heading" style="text-align: right;">Total Price</th>
-            
+
             </tr>
         </thead>
         <table class="show-cart table"></table>
@@ -263,13 +263,13 @@
                                                               </div>
                                                               <div>
                                                                 <label for="validationServer03" class="form-label">State<span class="required-star">*</span></label>
-                                                            <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                                                            <input type="text" class="form-control" id="form-state" aria-describedby="validationServer03Feedback" required>
                                                             <div id="validationServer03Feedback" class="invalid-feedback">
                                                               Please provide a valid state.
-                                                            </div>    
+                                                            </div>
                                                             <div>
                                                               <label for="validationServer04" class="form-label">City<span class="required-star">*</span></label>
-                                                            <input type="text" class="form-control" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                                            <input type="text" class="form-control" id="form-city" aria-describedby="validationServer04Feedback" required>
                                                             <div id="validationServer04Feedback" class="invalid-feedback">
                                                               Please provide a valid city.
                                                             </div>
@@ -364,6 +364,8 @@ integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQO
     var Memail = $('#form-email').val();
     var Mphone = $('#form-phone').val();
     var Mtext = $('#form-text').val();
+    var Mcity = $('#form-city').val();
+    var Mstate =  $('#form-state').val();
     //var Mprice = document.getElementsByClassName("total-cart");
     var Mgrey = document.getElementById("form-quantity-Grey");
     var Myarn = document.getElementById("form-quantity-Yarn");
@@ -394,7 +396,7 @@ integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQO
       console.log("In third");
       Mprod = "Grey Product and Yarn"
     }
-    var Mbody = 'Details<br>Name: '+Mname+'<br>Email: '+Memail+'<br>Phone number: '+Mphone+'<br>Address: '+Mtext+
+    var Mbody = 'Details<br>Name: '+Mname+'<br>Email: '+Memail+'<br>Phone number: '+Mphone+'<br>City: '+Mcity+'<br>State: '+Mstate+'<br>Address: '+Mtext+
     '<br>Products :'+Mprod+' <br>Quantity : '+ Mquantity + '<br>Price : '+Mprice;
     console.log("Without sending mail");
 
@@ -430,7 +432,7 @@ integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQO
           form.addClass("is-invalid");
         }
         else {
-         
+
           $("#submit-btn").addClass("active");
           sendMail();
         }
@@ -443,15 +445,15 @@ integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQO
 
   // Get the modal
   var modal = document.getElementById("myModal");
-    
+
   // Get the button that opens the modal
   var btn = document.getElementById("modal-submit");
-  
+
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
-  
-  // When the user clicks the button, open the modal 
-  
+
+  // When the user clicks the button, open the modal
+
   btn.onclick =function() {
     modal.style.display = "block";
   }
@@ -460,7 +462,7 @@ integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQO
   span.onclick = function() {
     modal.style.display = "none";
   }
-  
+
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
