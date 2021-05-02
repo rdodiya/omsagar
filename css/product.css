@@ -1,153 +1,156 @@
 
 .container1{
-    padding:3rem 0;
+  padding:3rem 0;
 
-  }
-  .first_card{
-    background: #dfe7f2;
-    height:auto;
-    border-radius: 2rem;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    max-width: 960px;
-    padding-bottom: 5mm;
-    padding-right: 5mm;
-  }
+}
+.first_card{
+  width: auto;
+  background: #dfe7f2;
+  height:auto;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 960px;
+  padding-bottom: 5mm;
+  padding-right: 5mm;
+}
 .second_card{
-    background: #f7ead9;
-    height:auto;
-    border-radius: 2rem;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    max-width: 960px;
-    padding-bottom: 5mm;
-  }
-  .third_card{
-    background: #fef4b7;
-    height:auto;
-    border-radius: 2rem;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    max-width: 960px;
-    padding-bottom: 5mm;
+width: auto;
+  background: #f7ead9;
+  height:auto;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 960px;
+  padding-bottom: 5mm;
+}
+.third_card{
+  width: auto;
+  background: #fef4b7;
+  height:auto;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 960px;
+  padding-bottom: 5mm;
 
-  }
-  .title{
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin:3.5rem 0 1.5rem;
-    color: black;
-  }
-  h1{
-    color: var(--title-color);
-  }
-  .description{
+}
+.title{
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin:3.5rem 0 1.5rem;
+  color: black;
+}
+h1{
+  color: var(--title-color);
+}
+.description{
 
-    color:#94908d;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin:0;
-    text-align: justify;
+  color:#94908d;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin:0;
+  text-align: justify;
 
 
-  }
-  .bottom-space{
-    padding-bottom: 5mm;
-  }
+}
+.bottom-space{
+  padding-bottom: 5mm;
+}
 
-  .arrow_btn{
-    background: none;
-    border: none;
-  }
+.arrow_btn{
+  background: none;
+  border: none;
+}
 .chair_bg,
 .lamp_bg,
 .couch_bg{
-  border-color:#acb9c9;
+border-color:#acb9c9;
 }
 
 @media (max-width:992px){
-  .cont ainer{
-    max-width: 720px;
-  }
-  .lamp_card,
-  .chair_card,
-  .couch_card{
-    margin-bottom:2rem;
-  }
+.cont ainer{
+  max-width: 720px;
+}
+.lamp_card,
+.chair_card,
+.couch_card{
+  margin-bottom:2rem;
+}
 }
 
-      /* Initially, hide the extra text that
+    /* Initially, hide the extra text that
 
-          can be revealed with the button */
+        can be revealed with the button */
 
-        #moreText {
-            /* Display nothing for the element */
-
-            display: none;
-
-        }
-        #moreText2 {
-            /* Display nothing for the element */
-
-            display: none;
-
-        }
-        #moreText3 {
-            /* Display nothing for the element */
-
-            display: none;
-
-        }
-        #moreText4 {
-            /* Display nothing for the element */
-
-            display: none;
-
-        }
-        #moreText5 {
-            /* Display nothing for the element */
-
-            display: none;
-
-        }
-        #moreText6 {
+      #moreText {
           /* Display nothing for the element */
 
           display: none;
 
       }
-      #moreText7 {
+      #moreText2 {
+          /* Display nothing for the element */
+
+          display: none;
+
+      }
+      #moreText3 {
+          /* Display nothing for the element */
+
+          display: none;
+
+      }
+      #moreText4 {
+          /* Display nothing for the element */
+
+          display: none;
+
+      }
+      #moreText5 {
+          /* Display nothing for the element */
+
+          display: none;
+
+      }
+      #moreText6 {
         /* Display nothing for the element */
 
         display: none;
 
     }
-    #moreText8 {
+    #moreText7 {
       /* Display nothing for the element */
 
       display: none;
 
   }
+  #moreText8 {
+    /* Display nothing for the element */
+
+    display: none;
+
+}
 
 
 :root{
-  --primary-color: aliceblue;
-  --secondary-color: #0075A2;
-  --title-color: ##0075A2;
-  --border-cursor-color : rgba(255,255,255,.75);
+--primary-color: aliceblue;
+--secondary-color: #0075A2;
+--title-color: ##0075A2;
+--border-cursor-color : rgba(255,255,255,.75);
 }
 
-  [data-theme="dark"] {
-    --primary-color: black;
-    --secondary-color: white;
-    --title-color: #fec150;
-  }
+[data-theme="dark"] {
+  --primary-color: black;
+  --secondary-color: white;
+  --title-color: #fec150;
+}
 
 body{
-    /* font-family: "Poppins", sans-serif; */
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    font-family: "Comic Sans MS";
+  /* font-family: "Poppins", sans-serif; */
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: "Comic Sans MS";
 }
 form{
 background-color: var(--form-bg);
@@ -229,7 +232,7 @@ transform: translateX(0px);
 }
 
 input:checked + .slider .feather-moon {
-opacity: 1;
+opacity: 1;ō
 transform: translateX(0);
 }
 
@@ -238,4 +241,48 @@ opacity: 0;
 transform: translateX(-4px);
 }
 
-/*     ANIMATION  */
+
+.heading {
+
+white-space: nowrap;
+overflow: hidden;
+text-align: justify;
+position: relative;
+}
+
+.heading{
+animation: animated-heading 1s linear 1s 1 normal both,
+           animated-cursor 600ms linear infinite;
+
+}
+.p1 {
+
+width:auto;
+height: auto;
+position: re;
+
+animation-duration: 1s;
+}
+
+/* Animation */
+.p1 {
+animation: animated-p 1s linear 1s 1 normal both;
+            
+
+position: relative;
+}
+/* text animation */
+
+@keyframes animated-p{
+
+0%   { right:500px; top:15px;visibility: hidden;}
+100%  { right:0px; top:0px;visibility: visible;}
+}
+
+
+/* heading animation */
+
+@keyframes animated-heading{
+from{max-height: 0;text-align: justify;visibility: hidden;}
+to{max-height: 100px;text-align: justify;visibility: visible;}
+}
