@@ -15,7 +15,7 @@
         else {
          
           $("#submit-btn").addClass("active");
-       Message1();
+           sendMail();
         }
         form.classList.add('was-validated');
       }, false);
@@ -24,30 +24,39 @@
 })();
 
 
-  // Get the modal
-  var modal = document.getElementById("myModal");
-    
-  // Get the button that opens the modal
-  var btn = document.getElementById("modal-submit");
-  
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-  
-  // When the user clicks the button, open the modal 
-  
-  btn.onclick =function() {
-    modal.style.display = "block";
-  }
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
+function sendMail(){
+  // alert("sendmail called");
+
+  var Mname = $('#form-name').val();
+  var Memail = $('#form-email').val();
+  var Mphone = $('#form-phone').val();
+  var Mtext = $('#form-text').val();
+  var Mdeal = document.getElementById("form-dealer");
+  var Mcust = document.getElementById("form-customer");
+  var Muser;
+  if(Mdeal){
+    Muser = "Dealer";
+  } else {
+    Muser = "Customer"
   }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+  var Mbody = 'Details Name : '+Mname+'<br>Email : '+Memail+'<br>Phone number :'+Mphone+'<br>by : '+Muser+'<br>Complain Details : '+Mtext;
+    Email.send({
+
+    // Host : "smtp.gmail.com",
+    // Username : "omsagar6654@gmail.com",
+    SecureToken: "127e16a9-a597-41f7-9323-7251ac5e1842",
+    To : '19ce003@charusat.edu.in',
+    From : "omsagar6654@gmail.com",
+    Subject : "New Mail from " + Mname + " - "+Msub,
+    Body : Mbody
+  }).then(
+    message =>{
+        if(message=='OK'){
+          alert('Thank you, your email has been send Successfully');
+        } else {
+          alert('Error in sending email. Try again..');
+        }
     }
-  }
-
+  );
+}

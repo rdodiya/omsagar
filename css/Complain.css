@@ -13,7 +13,9 @@
     --secondary-color: white;
     --title-color: #fec150;
   }
-
+.required-star{
+  color: red;
+}
 .heading{
     color: var(--title-color);
 }
